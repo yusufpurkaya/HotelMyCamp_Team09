@@ -33,4 +33,6 @@ public class LoginPage {
         passwordWebElement.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
         accountLoginWebElement.click();
     }
+@FindBy(xpath = "//h1[@class='mb-4 bread']")
+   public WebElement loginEkrani;
 }
