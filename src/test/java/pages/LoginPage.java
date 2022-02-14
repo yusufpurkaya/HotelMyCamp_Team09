@@ -35,4 +35,6 @@ public class LoginPage {
     }
 @FindBy(xpath = "//h1[@class='mb-4 bread']")
    public WebElement loginEkrani;
+    @FindBy(xpath = "//span[@class='btn btn-primary py-3 px-5']")
+public WebElement createANewAccountButton;
 }
