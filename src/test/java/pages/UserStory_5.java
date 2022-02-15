@@ -1,9 +1,7 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -55,9 +53,45 @@ public class UserStory_5 extends TestBase {
 
         // "Edit hotel" yazisi kontrol edilmeli.
 
-        WebElement editHotelButonu = driver.findElement(By.xpath("(//a[@href=\"#\"])[1]"));
-        editHotelButonu.click();
+       // public WebElement editHotelYaziElementi;
+        WebElement edithotelpage=driver.findElement(By.xpath("(//a[@href='/admin/HotelAdmin'])[2]"));
+
+        WebElement editHotelYaziElementi = driver.findElement(By.xpath("(//div[@class='caption'])[1]"));
+        Assert.assertTrue(editHotelYaziElementi.isDisplayed());
+
 
         // 4- "Code,Name,Adress,Phone,Email,Group" secenekleri güncellenebilmeli "Save" butonuna tıklanabilmeli.
+        driver.switchTo().newWindow(WindowType.TAB);
+        driver.navigate().to("https://www.hotelmycamp.com/admin/HotelAdmin/Edit?Id=1103");
+      WebElement codeButonElementi=driver.findElement(By.xpath("//input[@id='Code']"));
+      codeButonElementi.sendKeys("2222");
+
+
+        WebElement hotelNameButonueElementi= driver.findElement(By.xpath("//input[@id='Name']"));
+        hotelNameButonueElementi.sendKeys("Aqua Park");
+
+
+
+        WebElement addressButonuElementi=driver.findElement(By.xpath("//input[@id='Address']"));
+        addressButonuElementi.sendKeys("Los Angeles");
+
+
+        WebElement phoneButonuElementi=driver.findElement(By.xpath("//input[@id='Phone']"));
+        phoneButonuElementi.sendKeys("1917222333");
+
+        WebElement emailButonu= driver.findElement(By.xpath("//input[@id='Email']"));
+        emailButonu.sendKeys("aquapark@gmail.com");
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
