@@ -20,6 +20,14 @@ public class HotelManagerPage {
     }
     Faker faker = new Faker();
 
+    //username textbox
+    @FindBy(id = "UserName")
+    public  WebElement usernameWebElement;
+
+    //LISTOFUSER webelement
+    @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    public  WebElement listOfUsersWebElement;
+
     //Hotel Manager Butonu
     @FindBy(xpath = "//span[text()='Hotel Management']")
     public WebElement hotelManagerButonuWebElement;
@@ -27,6 +35,10 @@ public class HotelManagerPage {
     //Room reservations butonu
     @FindBy(xpath = "(//i[@class='icon-calendar'])[4]")
     public WebElement roomReservationsWebElement;
+
+    //LIST OF RESERVATIONS yazısı
+    @FindBy (xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    public WebElement listOfReservationsWebElement;
 
     //ADD ROOM RESERVATIONS butonu
     @FindBy(xpath = "//span[text()='Add Room Reservation ']")
@@ -120,16 +132,16 @@ public class HotelManagerPage {
         int rnd = faker.random().nextInt(1, idUserDropdownList.size() - 1);
         select.selectByIndex(rnd);
     }
-
+    //dateStart
     public void dateStart() {
         LocalDate localDate = LocalDate.now();
-        LocalDate eklenmisLocalDate = localDate.plusDays(10);
+        LocalDate eklenmisLocalDate = localDate.plusDays(5);
         DateTimeFormatter duzenliDateStart = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         String localDateStr = eklenmisLocalDate.format(duzenliDateStart);
         dateStartWebElement.click();
         dateStartWebElement.sendKeys(localDateStr);
     }
-
+    //dateEnd
     public void dateEnd() {
         LocalDate localDate = LocalDate.now();
         LocalDate eklenmisLocalDate = localDate.plusDays(15);
@@ -139,15 +151,14 @@ public class HotelManagerPage {
         dateEndWebElement.sendKeys(localDateStr);
     }
     public void createHotelRoomReservation(){
-        addRoomReservations();
         Actions actions=new Actions(Driver.getDriver());
         selectUserDropdownElementSecimi();
         selecthotelroomDropdownElementSecimi();
         priceWebElement.sendKeys("300");
         dateStart();
-        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitFor(1);
         dateEnd();
-        ReusableMethods.waitFor(2);
+        //ReusableMethods.waitFor(2);
         actions.click(adultAmountWebElement).sendKeys("2").sendKeys(Keys.TAB).
                 sendKeys("2").sendKeys(Keys.TAB).
                 sendKeys(faker.name().lastName()).sendKeys(Keys.TAB).
