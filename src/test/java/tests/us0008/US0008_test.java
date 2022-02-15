@@ -8,9 +8,11 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.io.IOException;
+
 public class US0008_test {
     @Test
-    public void test(){
+    public void test() throws IOException {
         LoginPage loginPage=new LoginPage();
         HotelManagerPage hotelManagerPage=new HotelManagerPage();
         SoftAssert softAssert=new SoftAssert();
@@ -45,6 +47,7 @@ public class US0008_test {
         softAssert.assertTrue(hotelManagerPage.alertTextWebElement.isDisplayed());
 
         //7- "RoomReservation was inserted successfully" mesajı görülebilmeli ve "OK" butonu tıklanabilir olmalı
+        ReusableMethods.getScreenshot("alert_yazisi");
         hotelManagerPage.alertButtonWebElement.click();
         Driver.closeDriver();
         softAssert.assertAll();
