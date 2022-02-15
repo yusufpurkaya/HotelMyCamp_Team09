@@ -1,7 +1,5 @@
 package utilities;
 
-import org.bouncycastle.util.Properties;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -9,8 +7,11 @@ import java.util.Properties;
 public class ConfigReader {
     public static Properties properties;
 
-    static {
+
+
+    static{
         String path="src/configuration.properties";
+
         try {
             FileInputStream fis=new FileInputStream(path);
             properties=new Properties();
@@ -20,8 +21,10 @@ public class ConfigReader {
             e.printStackTrace();
         }
     }
+
     public static String getProperty(String key){
 
         return properties.getProperty(key);
     }
+
 }
