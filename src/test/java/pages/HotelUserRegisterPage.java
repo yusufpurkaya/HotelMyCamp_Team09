@@ -69,6 +69,12 @@ public class HotelUserRegisterPage {
     @FindBy(xpath = "//input[@id='btnSubmit']")
     public WebElement saveLinki;
 
+    @FindBy(xpath = "(//div[text()='User Data was inserted successfully'])[2]")
+    public WebElement userDataGirisiBasariliAlert;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary']")
+    public WebElement alertOK;
+
 
 
 
