@@ -11,8 +11,6 @@ public class HotelProjePage_US04 {
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    //@FindBy(xpath ="//title[text()='Hotelmycamp - Home']")
-    //@FindBy(xpath = "//head/title[text()='Hotelmycamp - Home']")
     @FindBy(xpath = "(//a[text()='Hotelmycamp'])")
     public WebElement homePageText;
 
@@ -31,10 +29,6 @@ public class HotelProjePage_US04 {
     @FindBy(xpath = "//span[text()='System Management']")
     public WebElement systemManagementLink;
 
-    //@FindBy(linkText = "Hotel Management")
-//    @FindBy(xpath = "(//i[@class='icon-users'])[2]")
-    //@FindBy(xpath = "//i[@class='icon-calendar'])[2]")
-    //@FindBy(xpath = "(//span[@class='arrow'])[2]")
     @FindBy(xpath = "//span[text()='Hotel Management']")
     public WebElement hotelManagementLink;
 
