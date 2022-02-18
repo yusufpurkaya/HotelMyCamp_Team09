@@ -8,23 +8,33 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class US0010 {
-   LoginPage loginPage=new LoginPage();
-    SoftAssert softAssert=new SoftAssert();
+    LoginPage loginPage = new LoginPage();
+    SoftAssert softAssert = new SoftAssert();
+
     @Test
-    public void testCase01(){
+    public void testCase01() {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         loginPage.ilkSayfaLoginButtonWebElement.click();
         softAssert.assertTrue(loginPage.loginEkrani.isDisplayed());
         softAssert.assertAll();
         Driver.closeDriver();
     }
+
     @Test
-    public void testCase02(){
+    public void testCase02() {
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         loginPage.ilkSayfaLoginButtonWebElement.click();
 
         Assert.assertTrue(loginPage.createANewAccountButton.isEnabled());
         loginPage.createANewAccountButton.click();
-        Driver.closeDriver();
+        // Driver.closeDriver();
     }
+
+    @Test
+    public void testCase03() {
+
+        loginPage.yeniHesapOlustur();
+    }
+
+
 }
