@@ -34,6 +34,7 @@ public class US0010 {
     public void testCase03() {
 
         loginPage.yeniHesapOlustur();
+
     }
 
 
