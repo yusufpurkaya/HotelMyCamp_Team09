@@ -87,6 +87,15 @@ public AnasayfaPage(){
     @FindBy (xpath = "//a[.='Even the all-powerful Pointing has no control about the blind texts 5']")
     public WebElement recentblogButonu2;
 
+    @FindBy (xpath = "//a[.='Even the all-powerful Pointing has no control about the blind texts 4']")
+
+    public WebElement recentblogButonu3;
+    @FindBy (xpath = "//a[.='Even the all-powerful Pointing has no control about the blind texts 3']")
+    public WebElement recentblogButonu4;
+    @FindBy (id = "IDRoomType")
+    public WebElement singleElementi;
+    @FindBy(id = "AdultCount")
+    public WebElement yetiskinSayisiButonu;
 
 
 }
