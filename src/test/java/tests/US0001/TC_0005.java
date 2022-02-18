@@ -37,6 +37,19 @@ public class TC_0005 {
         String actualResultblog2=Driver.getDriver().getTitle();
         String expectedResultrecentblog2="blind texts 5";
         Assert.assertTrue(actualResultblog2.contains(expectedResultrecentblog2));
+        Driver.getDriver().navigate().back();
+        anasayfaPage.recentblogButonu3.click();
+        String actualResultblog3=Driver.getDriver().getTitle();
+        String expectedResultrecentblog3="blind texts 4";
+        Assert.assertTrue(actualResultblog3.contains(expectedResultrecentblog3));
+
+        Driver.getDriver().navigate().back();
+        anasayfaPage.recentblogButonu4.click();
+        String actualResultblog4=Driver.getDriver().getTitle();
+        String expectedResultrecentblog4="blind texts 3";
+        Assert.assertTrue(actualResultblog4.contains(expectedResultrecentblog4));
+
+
 
 
 
