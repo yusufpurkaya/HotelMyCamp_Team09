@@ -71,6 +71,7 @@ actions.sendKeys(faker.internet().emailAddress()).sendKeys(Keys.TAB).
         sendKeys("yes").sendKeys(Keys.TAB).
 
        perform();
+
     }
 
 }
