@@ -120,7 +120,7 @@ public class HotelManagerPage {
         Faker faker = new Faker();
         Select select = new Select(selectUserDropdownWebElement);
         List<WebElement> idUserDropdownList = select.getOptions();
-        int rnd = faker.random().nextInt(1, idUserDropdownList.size() - 1);
+        int rnd = faker.random().nextInt(1, idUserDropdownList.size() );
         select.selectByIndex(rnd);
     }
 
@@ -129,7 +129,7 @@ public class HotelManagerPage {
 
         Select select = new Select(selecthotelroomDropdownWebElement);
         List<WebElement> idUserDropdownList = select.getOptions();
-        int rnd = faker.random().nextInt(1, idUserDropdownList.size() - 1);
+        int rnd = faker.random().nextInt(1, idUserDropdownList.size() );
         select.selectByIndex(rnd);
     }
     //dateStart
