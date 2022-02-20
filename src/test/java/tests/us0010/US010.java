@@ -14,7 +14,7 @@ public class US010 extends TestBaseRapor {
 
     @Test(groups = {"us10,team09"})
     public void test01(){
-extentTest=extentReports.createTest("US10TC01","siteye erisim ve login erisim");
+extentTest=extentReports.createTest("US10TC01","siteye erisim ve login erisim testi");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
 extentTest.pass("hotelmycamp sitesine erisildi");
         LoginPage loginPage=new LoginPage();
@@ -31,8 +31,8 @@ extentTest.pass("login linkine ersildi");
 
 
     @Test(groups = {"us10,team09"})
-    public void test02(){
-        extentTest=extentReports.createTest("US10TC02","siteye , login ve create a new account butonuna erisim");
+    public void testCase02(){
+        extentTest=extentReports.createTest("US10TC02","siteye , login ve create a new account butonuna erisim testi");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         extentTest.pass("hotelmycamp sitesine erisildi");
         LoginPage loginPage=new LoginPage();
@@ -43,8 +43,8 @@ extentTest.pass("login linkine ersildi");
         extentTest.pass("create a new account butonuna tiklandi");
     }
     @Test(groups = {"us10,team09"})
-    public void test03(){
-        extentTest=extentReports.createTest("US10TC03","yeni kullanici hesabi alma");
+    public void testCase03(){
+        extentTest=extentReports.createTest("US10TC03","yeni kullanici hesabi olusturma testi");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         extentTest.pass("hotelmycamp sitesine erisildi");
         LoginPage loginPage=new LoginPage();
@@ -60,7 +60,7 @@ extentTest.pass("login linkine ersildi");
     }
     @Test(groups = {"us10,team09"})
     public void testCase04() throws InterruptedException {
-        extentTest=extentReports.createTest("US10TC01","siteye erisim ve login erisim");
+        extentTest=extentReports.createTest("US10TC04","hesap olusturulduktan sonra giris yapma testi");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         extentTest.pass("hotelmycamp sitesine erisildi");
         LoginPage loginPage=new LoginPage();
@@ -79,7 +79,7 @@ extentTest.pass("kayit sonrasi log in butonu gorunurlugu test edildi");
     }
     @Test(groups = {"us10,team09"})
     public void testCase05() throws InterruptedException {
-        extentTest=extentReports.createTest("US10TC05","siteye erisim ve login erisim");
+        extentTest=extentReports.createTest("US10TC05","kullanici girisi ve reservation");
         Driver.getDriver().get(ConfigReader.getProperty("HMCUrl"));
         extentTest.pass("hotelmycamp sitesine erisildi");
         LoginPage loginPage=new LoginPage();
@@ -100,7 +100,7 @@ extentTest.pass("kayit sonrasi log in butonu gorunurlugu test edildi");
        extentTest.pass("alinan hesapla siteye giris yapildi");
         Thread.sleep(2000);
 loginPage.reservationRoom();
-extentTest.pass("alina hesapla oda reseve edildi");
+extentTest.pass("alinan hesapla oda reseve edildi");
 Thread.sleep(2000);
 //Assert.assertTrue(loginPage.ilkoda.getText().contains(loginPage.reservationGorunum.getText()));
   Assert.assertTrue(loginPage.reservationGorunum.isDisplayed());
