@@ -7,7 +7,7 @@
             </run>
         </groups>
         <packages>
-            <package name="test.uS00010"></package>
+            <package name="tests.us0010"></package>
         </packages>
     </test>
     
