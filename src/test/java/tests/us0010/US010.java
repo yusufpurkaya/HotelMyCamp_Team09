@@ -1,4 +1,4 @@
-package tests.uS00010;
+package tests.us0010;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
@@ -10,7 +10,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.TestBaseRapor;
 
-public class C01US10 extends TestBaseRapor {
+public class US010 extends TestBaseRapor {
 
     @Test(groups = {"us10,team09"})
     public void test01(){
