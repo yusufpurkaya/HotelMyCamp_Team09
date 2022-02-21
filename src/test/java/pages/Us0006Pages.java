@@ -34,7 +34,7 @@ public class Us0006 {
     @FindBy(xpath = "(//i[@class='icon-calendar'])[3]")
     public WebElement hotelRoomsButonu;
 
-    @FindBy(className = "caption")
+    @FindBy(xpath = "//div[@class='caption']")
     public WebElement listOfHotelRoomsElementi;
 
     @FindBy(className = "hidden-480")
